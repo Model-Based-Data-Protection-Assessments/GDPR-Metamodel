@@ -1,0 +1,58 @@
+module org.palladiosimulator.pcm.confidentiality.context.mwe2
+
+import org.eclipse.emf.mwe.utils.StandaloneSetup
+import org.eclipse.emf.mwe.utils.DirectoryCleaner
+import org.eclipse.emf.mwe2.ecore.EcoreGenerator
+import tools.mdsd.ecoreworkflow.mwe2lib.bean.EclipseRCPSupportingStandaloneSetup
+import tools.mdsd.ecoreworkflow.mwe2lib.component.*
+
+var workspaceRoot = "../../" 
+
+Workflow {
+	bean = EclipseRCPSupportingStandaloneSetup {
+		scanClassPath = true
+		platformUri = workspaceRoot
+		
+
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
+			onStandalone = "platform:/resource/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
+		} 
+		
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/org.eclipse.emf.codegen.ecore/model/GenModel.ecore"
+			onStandalone = "platform:/resource/org.eclipse.emf.codegen.ecore/model/GenModel.ecore"
+		}
+		
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel"
+			onStandalone = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel"
+		}
+		
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore"
+			onStandalone = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore"
+		}
+		
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
+			onStandalone = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
+		}
+		registerGenModelFile = "platform:/plugin/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
+		registerGenModelFile = "platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel"
+		registerGenModelFile = "platform:/plugin/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
+		registerGeneratedEPackage = "org.eclipse.uml2.codegen.ecore.genmodel.GenModelPackage"
+		
+		logResourceUriMap = true
+	}
+
+	component = EcoreGenerator {
+		generateCustomClasses = false
+		generateEdit = true
+		generateEditor = true
+		genModel = "platform:/resource/mdpa.gdpr.metamodel/model/GDPR.genmodel"
+		srcPath = "platform:/resource/mdpa.gdpr.metamodel/src-gen"
+		srcPath = "platform:/resource/mdpa.gdpr.metamodel.edit/src-gen"
+		srcPath = "platform:/resource/mdpa.gdpr.metamodel.edior/src-gen"
+	}
+}

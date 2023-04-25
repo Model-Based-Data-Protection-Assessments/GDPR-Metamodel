@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
-    modelDirectory="/GDPR-Metamodel/src-gen" creationIcons="false"
-    editDirectory="/GDPR-Metamodel.edit/src-gen" editorDirectory="/GDPR-Metamodel.editor/src-gen"
-    modelPluginID="GDPR-Metamodel" modelName="GDPR" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
-    copyrightFields="false" operationReflection="true" importOrganizing="true">
+    modelDirectory="/mdpa.gdpr.metamodel/src-gen" creationIcons="false"
+    editDirectory="/mdpa.gdpr.metamodel.edit/src-gen" editorDirectory="/mdpa.gdpr.metamodel.editor/src-gen"
+    modelPluginID="mdpa.gdpr.metamodel" modelName="GDPR" editPluginClass="mdpa.gdpr.metamodel.provider.GDPREditPlugin"
+    editorPluginClass="mdpa.gdpr.metamodel.presentation.GDPREditorPlugin" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    suppressEMFTypes="true" reflectiveDelegation="true" codeFormatting="true" testSuiteClass="mdpa.gdpr.metamodel.tests.GDPRAllTests"
+    importerID="org.eclipse.emf.importer.ecore" featureDelegation="Reflective" complianceLevel="5.0"
+    copyrightFields="false" editPluginID="mdpa.gdpr.metamodel.edit" editorPluginID="mdpa.gdpr.metamodel.editor"
+    operationReflection="true" importOrganizing="true">
   <foreignModel>GDPR.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
-  <genPackages prefix="GDPR" basePackage="gdpr-metamodel" disposableProviderFactory="true"
-      ecorePackage="GDPR.ecore#/">
+  <genPackages prefix="GDPR" basePackage="mdpa.gdpr.metamodel" disposableProviderFactory="true"
+      extensibleProviderFactory="true" childCreationExtenders="true" ecorePackage="GDPR.ecore#/">
     <genClasses ecoreClass="GDPR.ecore#//Processing">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GDPR.ecore#//Processing/inputData"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GDPR.ecore#//Processing/outputData"/>

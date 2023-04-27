@@ -8,7 +8,7 @@ Bundle-ClassPath: .
 Bundle-Activator: mdpa.gdpr.metamodel.provider.GDPREditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: mdpa.gdpr.metamodel.GDPR.provider,
  mdpa.gdpr.metamodel.provider
 Require-Bundle: org.eclipse.core.runtime,

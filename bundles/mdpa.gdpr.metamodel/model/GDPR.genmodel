@@ -56,5 +56,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GDPR.ecore#//Role/name"/>
     </genClasses>
     <genClasses ecoreClass="GDPR.ecore#//ThirdParty"/>
+    <genClasses ecoreClass="GDPR.ecore#//LegalAssessmentFacts">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GDPR.ecore#//LegalAssessmentFacts/processing"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GDPR.ecore#//LegalAssessmentFacts/purposes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GDPR.ecore#//LegalAssessmentFacts/data"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GDPR.ecore#//LegalAssessmentFacts/legalBases"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GDPR.ecore#//LegalAssessmentFacts/involvedParties"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

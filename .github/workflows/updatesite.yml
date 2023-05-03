@@ -35,7 +35,7 @@ jobs:
         with:
           deploy_key: ${{ secrets.UPDATE_SITE_DEPLOY_KEY }}
           external_repository: Model-Based-Data-Protection-Assessments/updatesite
-          destination_dir: nightly
+          destination_dir: nightly/gdpr-metamodel/
           publish_dir: releng/mdpa.gdpr.metamodel.updatesite/target/repository
           publish_branch: main
       - name: Publish Release Update Site
@@ -44,7 +44,7 @@ jobs:
         with:
           deploy_key: ${{ secrets.UPDATE_SITE_DEPLOY_KEY }}
           external_repository: Model-Based-Data-Protection-Assessments/updatesite
-          destination_dir: release/${{ github.event.release.tag_name }}
+          destination_dir: release/gdpr-metamodel/${{ github.event.release.tag_name }}
           publish_dir: releng/mdpa.gdpr.metamodel.updatesite/target/repository
           publish_branch: main
           

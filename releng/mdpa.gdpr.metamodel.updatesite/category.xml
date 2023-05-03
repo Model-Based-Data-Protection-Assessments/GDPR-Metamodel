@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="mdpa.gdpr.metamodel.feature">
+      <category name="gdpr_metamodel"/>
+   </feature>
+   <category-def name="gdpr_metamodel" label="GDPR Metamodel"/>
+</site>

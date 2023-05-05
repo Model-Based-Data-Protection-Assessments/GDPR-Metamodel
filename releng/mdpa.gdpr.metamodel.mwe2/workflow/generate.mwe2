@@ -18,9 +18,21 @@ Workflow {
 		generateCustomClasses = false
 		generateEdit = true
 		generateEditor = true
+		
 		genModel = "platform:/resource/mdpa.gdpr.metamodel/model/GDPR.genmodel"
 		srcPath = "platform:/resource/mdpa.gdpr.metamodel/src-gen"
 		srcPath = "platform:/resource/mdpa.gdpr.metamodel.edit/src-gen"
 		srcPath = "platform:/resource/mdpa.gdpr.metamodel.edior/src-gen"
+	}
+	
+		component = EcoreGenerator {
+		generateCustomClasses = false
+		generateEdit = true
+		generateEditor = true
+		
+		genModel = "platform:/resource/mdpa.gdpr.metamodel.contextproperties/model/contextproperties.genmodel"
+		srcPath = "platform:/resource/mdpa.gdpr.metamodel.contextproperties/src-gen"
+		srcPath = "platform:/resource/mdpa.gdpr.metamodel.contextproperties.edit/src-gen"
+		srcPath = "platform:/resource/mdpa.gdpr.metamodel.contextproperties.editor/src-gen"
 	}
 }

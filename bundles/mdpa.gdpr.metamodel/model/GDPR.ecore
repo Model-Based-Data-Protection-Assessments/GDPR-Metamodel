@@ -17,16 +17,16 @@
   <eClassifiers xsi:type="ecore:EClass" name="Transfering" eSuperTypes="#//Processing"/>
   <eClassifiers xsi:type="ecore:EClass" name="Useage" eSuperTypes="#//Processing"/>
   <eClassifiers xsi:type="ecore:EClass" name="Storing" eSuperTypes="#//Processing"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Data"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Data" eSuperTypes="#//AbstractGDPRElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="PersonalData" eSuperTypes="#//Data">
     <eStructuralFeatures xsi:type="ecore:EReference" name="references" lowerBound="1"
         upperBound="-1" eType="#//NaturalPerson"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Purpose">
+  <eClassifiers xsi:type="ecore:EClass" name="Purpose" eSuperTypes="#//AbstractGDPRElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="decidedOver" lowerBound="1"
         eType="#//Controller"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LegalBasis">
+  <eClassifiers xsi:type="ecore:EClass" name="LegalBasis" eSuperTypes="#//AbstractGDPRElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="personaldata" eType="#//PersonalData"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PerformanceOfContract" eSuperTypes="#//LegalBasis">
@@ -42,7 +42,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="consending" lowerBound="1"
         eType="#//NaturalPerson"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Proof">
+  <eClassifiers xsi:type="ecore:EClass" name="Proof" eSuperTypes="#//AbstractGDPRElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="consent" lowerBound="1"
         eType="#//Consent" eOpposite="#//Consent/proof"/>
   </eClassifiers>
@@ -53,7 +53,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="proof" upperBound="-1"
         eType="#//Proof" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Role">
+  <eClassifiers xsi:type="ecore:EClass" name="Role" abstract="true" eSuperTypes="#//AbstractGDPRElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ThirdParty" eSuperTypes="#//Role"/>
@@ -69,4 +69,5 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="involvedParties" upperBound="-1"
         eType="#//Role" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractGDPRElement" abstract="true"/>
 </ecore:EPackage>

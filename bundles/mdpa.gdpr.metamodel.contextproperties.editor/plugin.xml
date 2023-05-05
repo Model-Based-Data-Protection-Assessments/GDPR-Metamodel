@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated contextproperties -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="mdpa.gdpr.metamodel.contextproperties.presentation.ContextpropertiesModelWizardID"
+            name="%_UI_ContextpropertiesModelWizard_label"
+            class="mdpa.gdpr.metamodel.contextproperties.presentation.ContextpropertiesModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ContextpropertiesModelFile.gif">
+         <description>%_UI_ContextpropertiesModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated contextproperties -->
+      <editor
+            id="mdpa.gdpr.metamodel.contextproperties.presentation.ContextpropertiesEditorID"
+            name="%_UI_ContextpropertiesEditor_label"
+            icon="icons/full/obj16/ContextpropertiesModelFile.gif"
+            extensions="contextproperties"
+            class="mdpa.gdpr.metamodel.contextproperties.presentation.ContextpropertiesEditor"
+            contributorClass="mdpa.gdpr.metamodel.contextproperties.presentation.ContextpropertiesActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

@@ -3,5 +3,8 @@
    <feature id="mdpa.gdpr.metamodel.feature">
       <category name="gdpr_metamodel"/>
    </feature>
+   <feature id="mdpa.gdpr.metamodel.contextproperties.feature">
+      <category name="gdpr_metamodel"/>
+   </feature>
    <category-def name="gdpr_metamodel" label="GDPR Metamodel"/>
 </site>

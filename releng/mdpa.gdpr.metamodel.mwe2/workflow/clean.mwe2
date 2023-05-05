@@ -15,5 +15,8 @@ Workflow {
 		directory = "platform:/resource/mdpa.gdpr.metamodel/src-gen"
 		directory = "platform:/resource/mdpa.gdpr.metamodel.edit/src-gen"
 		directory = "platform:/resource/mdpa.gdpr.metamodel.editor/src-gen"
+		directory = "platform:/resource/mdpa.gdpr.metamodel.contextproperties/src-gen"
+		directory = "platform:/resource/mdpa.gdpr.metamodel.contextproperties.edit/src-gen"
+		directory = "platform:/resource/mdpa.gdpr.metamodel.contextproperties.editor/src-gen"
 	}
 }

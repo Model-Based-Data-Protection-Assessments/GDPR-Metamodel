@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
-    modelDirectory="/mdpa.gdpr.metamodel/src-gen" creationIcons="false"
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/mdpa.gdpr.metamodel/src-gen" creationIcons="false"
     editDirectory="/mdpa.gdpr.metamodel.edit/src-gen" editorDirectory="/mdpa.gdpr.metamodel.editor/src-gen"
     modelPluginID="mdpa.gdpr.metamodel" modelName="GDPR" editPluginClass="mdpa.gdpr.metamodel.provider.GDPREditPlugin"
     editorPluginClass="mdpa.gdpr.metamodel.presentation.GDPREditorPlugin" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    suppressEMFTypes="true" reflectiveDelegation="true" codeFormatting="true" testSuiteClass="mdpa.gdpr.metamodel.tests.GDPRAllTests"
-    importerID="org.eclipse.emf.importer.ecore" featureDelegation="Reflective" complianceLevel="5.0"
-    copyrightFields="false" editPluginID="mdpa.gdpr.metamodel.edit" editorPluginID="mdpa.gdpr.metamodel.editor"
-    operationReflection="true" importOrganizing="true">
+    suppressEMFTypes="true" reflectiveDelegation="true" codeFormatting="true" testsDirectory="/mdpa.gdpr.metamodel.tests/src-gen"
+    testSuiteClass="mdpa.gdpr.metamodel.tests.GDPRAllTests" importerID="org.eclipse.emf.importer.ecore"
+    featureDelegation="Reflective" complianceLevel="5.0" copyrightFields="false" editPluginID="mdpa.gdpr.metamodel.edit"
+    editorPluginID="mdpa.gdpr.metamodel.editor" operationReflection="true" importOrganizing="true">
   <foreignModel>GDPR.ecore</foreignModel>
-  <testsDirectory xsi:nil="true"/>
   <genPackages prefix="GDPR" basePackage="mdpa.gdpr.metamodel" disposableProviderFactory="true"
       extensibleProviderFactory="true" childCreationExtenders="true" ecorePackage="GDPR.ecore#/">
     <genClasses ecoreClass="GDPR.ecore#//Processing">
@@ -63,5 +61,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GDPR.ecore#//LegalAssessmentFacts/legalBases"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GDPR.ecore#//LegalAssessmentFacts/involvedParties"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="GDPR.ecore#//AbstractGDPRElement"/>
   </genPackages>
 </genmodel:GenModel>

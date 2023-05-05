@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/mdpa.gdpr.metamodel.contextproperties/src-gen"
+    creationIcons="false" editDirectory="/mdpa.gdpr.metamodel.contextproperties.edit/src-gen"
+    editorDirectory="/mdpa.gdpr.metamodel.contextproperties.editor/src-gen" modelPluginID="mdpa.gdpr.metamodel.contextproperties"
+    modelName="Contextproperties" editPluginClass="mdpa.gdpr.metamodel.contextproperties.provider.ContextpropertiesEditPlugin"
+    editorPluginClass="mdpa.gdpr.metamodel.contextproperties.presentation.ContextpropertiesEditorPlugin"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" suppressEMFTypes="true"
+    reflectiveDelegation="true" codeFormatting="true" testsDirectory="/mdpa.gdpr.metamodel.contextproperties.tests/src-gen"
+    testSuiteClass="mdpa.gdpr.metamodel.contextproperties.tests.ContextpropertiesAllTests"
+    importerID="org.eclipse.emf.importer.ecore" featureDelegation="Reflective" complianceLevel="5.0"
+    copyrightFields="false" usedGenPackages="../../mdpa.gdpr.metamodel/model/GDPR.genmodel#//GDPR"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>contextproperties.ecore</foreignModel>
+  <genPackages prefix="Contextproperties" basePackage="mdpa.gdpr.metamodel" disposableProviderFactory="true"
+      extensibleProviderFactory="true" childCreationExtenders="true" ecorePackage="contextproperties.ecore#/">
+    <genClasses ecoreClass="contextproperties.ecore#//ContextDependentProperties">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contextproperties.ecore#//ContextDependentProperties/propertyannotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contextproperties.ecore#//ContextDependentProperties/property"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contextproperties.ecore#//ContextDependentProperties/contextdefinition"/>
+    </genClasses>
+    <genClasses ecoreClass="contextproperties.ecore#//PropertyAnnotation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contextproperties.ecore#//PropertyAnnotation/contextannotation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contextproperties.ecore#//PropertyAnnotation/property"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contextproperties.ecore#//PropertyAnnotation/annotatedElement"/>
+    </genClasses>
+    <genClasses ecoreClass="contextproperties.ecore#//ContextAnnotation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contextproperties.ecore#//ContextAnnotation/propertyvalue"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contextproperties.ecore#//ContextAnnotation/contextdefinition"/>
+    </genClasses>
+    <genClasses ecoreClass="contextproperties.ecore#//Property">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contextproperties.ecore#//Property/propertyvalue"/>
+    </genClasses>
+    <genClasses ecoreClass="contextproperties.ecore#//PropertyValue"/>
+    <genClasses ecoreClass="contextproperties.ecore#//ContextDefinition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contextproperties.ecore#//ContextDefinition/gdprElements"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

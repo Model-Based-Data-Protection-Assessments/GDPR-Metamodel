@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="GDPR" nsURI="http://www.example.org/GDPR" nsPrefix="GDPR">
-  <eClassifiers xsi:type="ecore:EClass" name="Processing">
+  <eClassifiers xsi:type="ecore:EClass" name="Processing" eSuperTypes="#//AbstractGDPRElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputData" upperBound="-1"
         eType="#//Data"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputData" upperBound="-1"
@@ -57,7 +57,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ThirdParty" eSuperTypes="#//Role"/>
-  <eClassifiers xsi:type="ecore:EClass" name="LegalAssessmentFacts">
+  <eClassifiers xsi:type="ecore:EClass" name="LegalAssessmentFacts" eSuperTypes="../../tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="processing" upperBound="-1"
         eType="#//Processing" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="purposes" upperBound="-1"
@@ -69,5 +69,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="involvedParties" upperBound="-1"
         eType="#//Role" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AbstractGDPRElement" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractGDPRElement" abstract="true"
+      eSuperTypes="../../tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity"/>
 </ecore:EPackage>

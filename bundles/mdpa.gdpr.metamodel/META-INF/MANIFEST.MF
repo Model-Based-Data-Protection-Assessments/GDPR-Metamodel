@@ -12,5 +12,6 @@ Export-Package: mdpa.gdpr.metamodel.GDPR,
  mdpa.gdpr.metamodel.GDPR.impl,
  mdpa.gdpr.metamodel.GDPR.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
+ tools.mdsd.modelingfoundations.identifier;visibility:=reexport,
  org.eclipse.core.runtime
 Bundle-ActivationPolicy: lazy

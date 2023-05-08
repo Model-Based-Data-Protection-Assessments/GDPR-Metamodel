@@ -5,6 +5,8 @@
     <semanticResources>platform:/resource/mdpa.gdpr.metamodel/model/GDPR.ecore</semanticResources>
     <semanticResources>contextproperties.genmodel</semanticResources>
     <semanticResources>platform:/resource/mdpa.gdpr.metamodel/model/GDPR.genmodel</semanticResources>
+    <semanticResources>platform:/resource/tools.mdsd.modelingfoundations.identifier/model/identifier.ecore</semanticResources>
+    <semanticResources>platform:/resource/tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_QTasEOtLEe27xa5Zub3olQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_QT3YAOtLEe27xa5Zub3olQ" name="contextproperties" repPath="#_QT0UsOtLEe27xa5Zub3olQ" changeId="b30bc685-e23b-48a3-9c5f-c8c3d6c2f48a">

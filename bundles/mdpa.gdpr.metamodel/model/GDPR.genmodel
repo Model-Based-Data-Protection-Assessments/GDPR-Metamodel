@@ -6,8 +6,9 @@
     editorPluginClass="mdpa.gdpr.metamodel.presentation.GDPREditorPlugin" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     suppressEMFTypes="true" reflectiveDelegation="true" codeFormatting="true" testsDirectory="/mdpa.gdpr.metamodel.tests/src-gen"
     testSuiteClass="mdpa.gdpr.metamodel.tests.GDPRAllTests" importerID="org.eclipse.emf.importer.ecore"
-    featureDelegation="Reflective" complianceLevel="5.0" copyrightFields="false" editPluginID="mdpa.gdpr.metamodel.edit"
-    editorPluginID="mdpa.gdpr.metamodel.editor" operationReflection="true" importOrganizing="true">
+    featureDelegation="Reflective" complianceLevel="5.0" copyrightFields="false" 
+    usedGenPackages="../../tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel#//identifier"
+    editPluginID="mdpa.gdpr.metamodel.edit" editorPluginID="mdpa.gdpr.metamodel.editor" operationReflection="true" importOrganizing="true">
   <foreignModel>GDPR.ecore</foreignModel>
   <genPackages prefix="GDPR" basePackage="mdpa.gdpr.metamodel" disposableProviderFactory="true"
       extensibleProviderFactory="true" childCreationExtenders="true" ecorePackage="GDPR.ecore#/">

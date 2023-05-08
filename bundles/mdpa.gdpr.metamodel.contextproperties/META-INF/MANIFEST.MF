@@ -13,5 +13,6 @@ Export-Package: mdpa.gdpr.metamodel.contextproperties,
  mdpa.gdpr.metamodel.contextproperties.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  mdpa.gdpr.metamodel;visibility:=reexport,
+ tools.mdsd.modelingfoundations.identifier;visibility:=reexport,
  org.eclipse.core.runtime
 Bundle-ActivationPolicy: lazy

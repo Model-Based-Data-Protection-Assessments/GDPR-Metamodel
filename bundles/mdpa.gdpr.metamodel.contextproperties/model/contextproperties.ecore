@@ -26,9 +26,12 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Property" eSuperTypes="../../tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="propertyvalue" upperBound="-1"
-        eType="#//PropertyValue" containment="true"/>
+        eType="#//PropertyValue" containment="true" eOpposite="#//PropertyValue/parentProperty"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PropertyValue" eSuperTypes="../../tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PropertyValue" eSuperTypes="../../tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parentProperty" lowerBound="1"
+        eType="#//Property" eOpposite="#//Property/propertyvalue"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ContextDefinition" eSuperTypes="../../tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="gdprElements" lowerBound="1"
         upperBound="-1" eType="ecore:EClass ../../mdpa.gdpr.metamodel/model/GDPR.ecore#//AbstractGDPRElement"/>

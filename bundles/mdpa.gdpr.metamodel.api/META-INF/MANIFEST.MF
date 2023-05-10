@@ -6,7 +6,7 @@ Bundle-Version: 1.0.0.qualifier
 Require-Bundle: org.eclipse.emf.ecore,
  org.eclipse.core.resources,
  org.eclipse.core.runtime,
- tools.mdsd.library.standalone.initialization;bundle-version="0.3.0",
+ tools.mdsd.library.standalone.initialization,
  mdpa.gdpr.metamodel,
  mdpa.gdpr.metamodel.contextproperties
 Automatic-Module-Name: mdpa.gdpr.metamodel.api

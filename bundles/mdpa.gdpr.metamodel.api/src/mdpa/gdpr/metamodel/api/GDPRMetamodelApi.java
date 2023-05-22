@@ -2,6 +2,7 @@ package mdpa.gdpr.metamodel.api;
 
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -55,8 +56,6 @@ public class GDPRMetamodelApi {
 	private Map<String, PropertyAnnotation> id2PropertyAnnotation = new HashMap<>();
 	private Map<String, ContextAnnotation> id2ContextAnnotation = new HashMap<>();
 	private Map<AbstractGDPRElement, List<PropertyAnnotation>> annotatedElement2PropertyAnnotation = new HashMap<>();
-	
-	
 	
 	public void load(String gdprModelPath, Optional<String> contextPropertiesModel) {
 		if(EMFPlugin.IS_ECLIPSE_RUNNING) {
@@ -116,6 +115,18 @@ public class GDPRMetamodelApi {
 				this.annotatedElement2PropertyAnnotation.get(annotatedElement).add(propertyAnnotation);
 			}
 		}
+	}
+	
+	public Collection<Role> getInvolvedParties() {
+		return this.legalAssessmentFacts.getInvolvedParties();
+	}
+	
+	public Collection<Purpose> getPurposes() {
+		return this.legalAssessmentFacts.getPurposes();
+	}
+	
+	public Collection<LegalBasis> getLegalBases() {
+		return this.id2LegalBasisMap.values();
 	}
 	
 	public LegalAssessmentFacts getLegalAssessmentFacts() {

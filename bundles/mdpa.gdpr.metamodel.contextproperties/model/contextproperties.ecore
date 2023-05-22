@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="contextproperties" nsURI="http://www.example.org/contextproperties"
     nsPrefix="contextproperties">
-  <eClassifiers xsi:type="ecore:EClass" name="ContextDependentProperties" eSuperTypes="../../tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity">
+  <eClassifiers xsi:type="ecore:EClass" name="ContextDependentProperties" eSuperTypes="platform:/plugin/tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="propertyannotation" upperBound="-1"
         eType="#//PropertyAnnotation" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="property" upperBound="-1"
@@ -10,7 +10,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="contextdefinition" upperBound="-1"
         eType="#//ContextDefinition" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PropertyAnnotation" eSuperTypes="../../tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity">
+  <eClassifiers xsi:type="ecore:EClass" name="PropertyAnnotation" eSuperTypes="platform:/plugin/tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="contextannotation" upperBound="-1"
         eType="#//ContextAnnotation" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="property" lowerBound="1"
@@ -18,21 +18,21 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="annotatedElement" lowerBound="1"
         eType="ecore:EClass ../../mdpa.gdpr.metamodel/model/GDPR.ecore#//AbstractGDPRElement"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ContextAnnotation" eSuperTypes="../../tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity">
+  <eClassifiers xsi:type="ecore:EClass" name="ContextAnnotation" eSuperTypes="platform:/plugin/tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="propertyvalue" lowerBound="1"
         upperBound="-1" eType="#//PropertyValue"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contextdefinition" lowerBound="1"
         upperBound="-1" eType="#//ContextDefinition"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Property" eSuperTypes="../../tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity">
+  <eClassifiers xsi:type="ecore:EClass" name="Property" eSuperTypes="platform:/plugin/tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="propertyvalue" upperBound="-1"
         eType="#//PropertyValue" containment="true" eOpposite="#//PropertyValue/parentProperty"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PropertyValue" eSuperTypes="../../tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity">
+  <eClassifiers xsi:type="ecore:EClass" name="PropertyValue" eSuperTypes="platform:/plugin/tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parentProperty" lowerBound="1"
         eType="#//Property" eOpposite="#//Property/propertyvalue"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ContextDefinition" eSuperTypes="../../tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity">
+  <eClassifiers xsi:type="ecore:EClass" name="ContextDefinition" eSuperTypes="platform:/plugin/tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="gdprElements" lowerBound="1"
         upperBound="-1" eType="ecore:EClass ../../mdpa.gdpr.metamodel/model/GDPR.ecore#//AbstractGDPRElement"/>
   </eClassifiers>

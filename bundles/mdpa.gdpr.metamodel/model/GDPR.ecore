@@ -57,7 +57,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ThirdParty" eSuperTypes="#//Role"/>
-  <eClassifiers xsi:type="ecore:EClass" name="LegalAssessmentFacts" eSuperTypes="../../tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity">
+  <eClassifiers xsi:type="ecore:EClass" name="LegalAssessmentFacts" eSuperTypes="platform:/plugin/tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="processing" upperBound="-1"
         eType="#//Processing" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="purposes" upperBound="-1"
@@ -70,5 +70,5 @@
         eType="#//Role" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbstractGDPRElement" abstract="true"
-      eSuperTypes="../../tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity"/>
+      eSuperTypes="platform:/plugin/tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity"/>
 </ecore:EPackage>

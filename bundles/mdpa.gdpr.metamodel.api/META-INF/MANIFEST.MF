@@ -11,3 +11,4 @@ Require-Bundle: org.eclipse.emf.ecore,
  mdpa.gdpr.metamodel.contextproperties
 Automatic-Module-Name: mdpa.gdpr.metamodel.api
 Bundle-RequiredExecutionEnvironment: JavaSE-17
+Export-Package: mdpa.gdpr.metamodel.api

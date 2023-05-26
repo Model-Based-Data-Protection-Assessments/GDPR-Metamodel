@@ -117,6 +117,15 @@ public class GDPRMetamodelApi {
 		}
 	}
 	
+	public List<PropertyAnnotation> getPropertyAnnotations(AbstractGDPRElement element) {
+		List<PropertyAnnotation> annotations = this.annotatedElement2PropertyAnnotation.get(element);
+		if(annotations == null) {
+			return List.of();
+		} else {
+			return annotations;
+		}
+	}
+	
 	public Collection<Role> getInvolvedParties() {
 		return this.legalAssessmentFacts.getInvolvedParties();
 	}

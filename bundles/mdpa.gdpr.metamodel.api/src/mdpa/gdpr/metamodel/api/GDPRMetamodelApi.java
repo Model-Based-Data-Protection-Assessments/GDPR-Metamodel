@@ -57,17 +57,21 @@ public class GDPRMetamodelApi {
 	private Map<String, ContextAnnotation> id2ContextAnnotation = new HashMap<>();
 	private Map<AbstractGDPRElement, List<PropertyAnnotation>> annotatedElement2PropertyAnnotation = new HashMap<>();
 	
-	public void load(String gdprModelPath, Optional<String> contextPropertiesModel) {
+	public GDPRMetamodelApi(URI gdprModelPath, Optional<URI> contextPropertiesModel) {
 		if(EMFPlugin.IS_ECLIPSE_RUNNING) {
 			initStandalone();
 		}
-		
+		System.out.println("Loading GDPR model instance at " + gdprModelPath);
 		loadGDPRModel(gdprModelPath);
-		if(contextPropertiesModel.isPresent()) {			
+		if(contextPropertiesModel.isPresent()) {
+			System.out.println("Loading context property annotations model instance at " + contextPropertiesModel.get());
 			loadContextPropertiesModel(contextPropertiesModel.get());
 		}
 		
+		System.out.println("Resolving resources.");
 		resolveResources();
+		System.out.println("Initializing mappings.");
+		initializeMappings();
 	}
 	
 	public void initializeMappings() {
@@ -146,15 +150,11 @@ public class GDPRMetamodelApi {
 		return this.optContextDependentProperties;
 	}
 		
-	private void loadGDPRModel(String gdprModelPath) {
-		URI gdprModelURI = createRelativePluginURIFromAbsolutePath(gdprModelPath);
-
+	private void loadGDPRModel(URI gdprModelURI) {
 		this.legalAssessmentFacts = (LegalAssessmentFacts) this.loadResource(gdprModelURI);		
 	}
 	
-	private void loadContextPropertiesModel(String contextPropertiesModelPath) {
-		URI contextPropertiesModelURI = createRelativePluginURIFromAbsolutePath(contextPropertiesModelPath);
-
+	private void loadContextPropertiesModel(URI contextPropertiesModelURI) {
 		this.optContextDependentProperties = Optional.of((ContextDependentProperties) this.loadResource(contextPropertiesModelURI));		
 	}
 	
@@ -167,7 +167,7 @@ public class GDPRMetamodelApi {
 	}
 	
 	private EObject loadResource(URI modelURI) {
-		Resource resource = resources.getResource(modelURI, true);
+		Resource resource = this.resources.getResource(modelURI, true);
 		if (resource == null) {
 			throw new IllegalArgumentException(String.format("Model with URI %s could not be loaded", modelURI));
 		} else if (resource.getContents().isEmpty()) {
@@ -190,8 +190,8 @@ public class GDPRMetamodelApi {
         }
     }
 	
-    private URI createRelativePluginURIFromProjectPath(String projectName, String relativePath) {
-        String path = Paths.get(projectName, relativePath)
+    private URI createRelativePluginURIFromProjectPath(String relativePath) {
+        String path = Paths.get(relativePath)
             .toString();
         return URI.createPlatformPluginURI(path, false);
     }

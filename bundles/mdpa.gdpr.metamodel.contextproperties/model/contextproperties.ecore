@@ -33,7 +33,23 @@
         eType="#//Property" eOpposite="#//Property/propertyvalue"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ContextDefinition" eSuperTypes="../../tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contextDependentProperties"
+        upperBound="-1" eType="#//ContextDependentContextElement"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="gdprElements" lowerBound="1"
-        upperBound="-1" eType="ecore:EClass ../../mdpa.gdpr.metamodel/model/GDPR.ecore#//AbstractGDPRElement"/>
+        upperBound="-1" eType="#//GDPRContextElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContextElement" abstract="true" interface="true"
+      eSuperTypes="../../tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="negated" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContextDependentContextElement" eSuperTypes="#//ContextElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contextDependentProperty"
+        lowerBound="1" eType="#//PropertyAnnotation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GDPRContextElement" eSuperTypes="#//ContextElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gdprElement" lowerBound="1"
+        eType="ecore:EClass ../../mdpa.gdpr.metamodel/model/GDPR.ecore#//AbstractGDPRElement"/>
   </eClassifiers>
 </ecore:EPackage>

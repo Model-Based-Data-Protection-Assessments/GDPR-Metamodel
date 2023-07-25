@@ -14,26 +14,41 @@
   <foreignModel>contextproperties.ecore</foreignModel>
   <genPackages prefix="Contextproperties" basePackage="mdpa.gdpr.metamodel" disposableProviderFactory="true"
       extensibleProviderFactory="true" childCreationExtenders="true" ecorePackage="contextproperties.ecore#/">
-    <genClasses ecoreClass="contextproperties.ecore#//ContextDependentProperties">
+    <genClasses ecoreClass="contextproperties.ecore#//ContextDependentProperties"
+        labelFeature="../../tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel#//identifier/NamedElement/entityName">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contextproperties.ecore#//ContextDependentProperties/propertyannotation"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contextproperties.ecore#//ContextDependentProperties/property"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contextproperties.ecore#//ContextDependentProperties/contextdefinition"/>
     </genClasses>
-    <genClasses ecoreClass="contextproperties.ecore#//PropertyAnnotation">
+    <genClasses ecoreClass="contextproperties.ecore#//PropertyAnnotation" labelFeature="../../tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel#//identifier/NamedElement/entityName">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contextproperties.ecore#//PropertyAnnotation/contextannotation"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contextproperties.ecore#//PropertyAnnotation/property"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contextproperties.ecore#//PropertyAnnotation/annotatedElement"/>
     </genClasses>
-    <genClasses ecoreClass="contextproperties.ecore#//ContextAnnotation">
+    <genClasses ecoreClass="contextproperties.ecore#//ContextAnnotation" labelFeature="../../tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel#//identifier/NamedElement/entityName">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contextproperties.ecore#//ContextAnnotation/propertyvalue"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contextproperties.ecore#//ContextAnnotation/contextdefinition"/>
     </genClasses>
-    <genClasses ecoreClass="contextproperties.ecore#//Property">
+    <genClasses ecoreClass="contextproperties.ecore#//Property" labelFeature="../../tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel#//identifier/NamedElement/entityName">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contextproperties.ecore#//Property/propertyvalue"/>
     </genClasses>
-    <genClasses ecoreClass="contextproperties.ecore#//PropertyValue"/>
-    <genClasses ecoreClass="contextproperties.ecore#//ContextDefinition">
+    <genClasses ecoreClass="contextproperties.ecore#//PropertyValue" labelFeature="../../tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel#//identifier/NamedElement/entityName">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference contextproperties.ecore#//PropertyValue/parentProperty"/>
+    </genClasses>
+    <genClasses ecoreClass="contextproperties.ecore#//ContextDefinition" labelFeature="../../tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel#//identifier/NamedElement/entityName">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contextproperties.ecore#//ContextDefinition/contextDependentProperties"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contextproperties.ecore#//ContextDefinition/gdprElements"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="contextproperties.ecore#//ContextElement"
+        labelFeature="../../tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel#//identifier/NamedElement/entityName">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contextproperties.ecore#//ContextElement/negated"/>
+    </genClasses>
+    <genClasses ecoreClass="contextproperties.ecore#//ContextDependentContextElement"
+        labelFeature="../../tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel#//identifier/NamedElement/entityName">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contextproperties.ecore#//ContextDependentContextElement/contextDependentProperty"/>
+    </genClasses>
+    <genClasses ecoreClass="contextproperties.ecore#//GDPRContextElement" labelFeature="../../tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel#//identifier/NamedElement/entityName">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contextproperties.ecore#//GDPRContextElement/gdprElement"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

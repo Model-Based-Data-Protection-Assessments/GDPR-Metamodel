@@ -13,13 +13,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="followingProcessing" upperBound="-1"
         eType="#//Processing"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Collection" eSuperTypes="#//Processing"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Collecting" eSuperTypes="#//Processing"/>
   <eClassifiers xsi:type="ecore:EClass" name="Transfering" eSuperTypes="#//Processing"/>
   <eClassifiers xsi:type="ecore:EClass" name="Useage" eSuperTypes="#//Processing"/>
   <eClassifiers xsi:type="ecore:EClass" name="Storing" eSuperTypes="#//Processing"/>
   <eClassifiers xsi:type="ecore:EClass" name="Data" eSuperTypes="#//AbstractGDPRElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="PersonalData" eSuperTypes="#//Data">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="references" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataReferences" lowerBound="1"
         upperBound="-1" eType="#//NaturalPerson"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Purpose" eSuperTypes="#//AbstractGDPRElement">

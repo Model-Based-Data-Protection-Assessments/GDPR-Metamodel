@@ -13,13 +13,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="followingProcessing" upperBound="-1"
         eType="#//Processing"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Collection" eSuperTypes="#//Processing"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Collecting" eSuperTypes="#//Processing"/>
   <eClassifiers xsi:type="ecore:EClass" name="Transfering" eSuperTypes="#//Processing"/>
   <eClassifiers xsi:type="ecore:EClass" name="Useage" eSuperTypes="#//Processing"/>
   <eClassifiers xsi:type="ecore:EClass" name="Storing" eSuperTypes="#//Processing"/>
   <eClassifiers xsi:type="ecore:EClass" name="Data" eSuperTypes="#//AbstractGDPRElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="PersonalData" eSuperTypes="#//Data">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="references" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataReferences" lowerBound="1"
         upperBound="-1" eType="#//NaturalPerson"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Purpose" eSuperTypes="#//AbstractGDPRElement">
@@ -27,19 +27,19 @@
         eType="#//Controller"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LegalBasis" eSuperTypes="#//AbstractGDPRElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="personaldata" eType="#//PersonalData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="personalData" eType="#//PersonalData"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PerformanceOfContract" eSuperTypes="#//LegalBasis">
     <eStructuralFeatures xsi:type="ecore:EReference" name="contractingParty" lowerBound="2"
         upperBound="-1" eType="#//Role"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExerciceOfPublicAuthrity" eSuperTypes="#//LegalBasis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExerciceOfPublicAuthority" eSuperTypes="#//LegalBasis"/>
   <eClassifiers xsi:type="ecore:EClass" name="Consent" eSuperTypes="#//LegalBasis">
     <eStructuralFeatures xsi:type="ecore:EReference" name="definedPurpose" lowerBound="1"
         upperBound="-1" eType="#//Purpose"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="proof" lowerBound="1" eType="#//Proof"
         eOpposite="#//Proof/consent"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="consending" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="consentee" lowerBound="1"
         eType="#//NaturalPerson"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Proof" eSuperTypes="#//AbstractGDPRElement">

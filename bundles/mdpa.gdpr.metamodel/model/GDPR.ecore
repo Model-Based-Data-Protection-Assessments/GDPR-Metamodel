@@ -12,6 +12,8 @@
         upperBound="-1" eType="#//LegalBasis"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="followingProcessing" upperBound="-1"
         eType="#//Processing"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="responsible" lowerBound="1"
+        eType="#//Role"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Collecting" eSuperTypes="#//Processing"/>
   <eClassifiers xsi:type="ecore:EClass" name="Transfering" eSuperTypes="#//Processing"/>
@@ -37,22 +39,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="Consent" eSuperTypes="#//LegalBasis">
     <eStructuralFeatures xsi:type="ecore:EReference" name="definedPurpose" lowerBound="1"
         upperBound="-1" eType="#//Purpose"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="proof" lowerBound="1" eType="#//Proof"
-        eOpposite="#//Proof/consent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="consentee" lowerBound="1"
         eType="#//NaturalPerson"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Proof" eSuperTypes="#//AbstractGDPRElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="consent" lowerBound="1"
-        eType="#//Consent" eOpposite="#//Consent/proof"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NaturalPerson" eSuperTypes="#//Role">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="birthdate" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Date"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Controller" eSuperTypes="#//Role">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="proof" upperBound="-1"
-        eType="#//Proof" containment="true"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Controller" eSuperTypes="#//Role"/>
   <eClassifiers xsi:type="ecore:EClass" name="Role" abstract="true" eSuperTypes="#//AbstractGDPRElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
   </eClassifiers>
@@ -71,4 +64,5 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbstractGDPRElement" abstract="true"
       eSuperTypes="../../tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Obligation" eSuperTypes="#//LegalBasis"/>
 </ecore:EPackage>

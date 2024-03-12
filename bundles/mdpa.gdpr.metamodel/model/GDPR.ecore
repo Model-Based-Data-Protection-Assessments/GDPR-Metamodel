@@ -30,6 +30,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LegalBasis" eSuperTypes="#//AbstractGDPRElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="personalData" eType="#//PersonalData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forPurpose" upperBound="-1"
+        eType="#//Purpose"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PerformanceOfContract" eSuperTypes="#//LegalBasis">
     <eStructuralFeatures xsi:type="ecore:EReference" name="contractingParty" lowerBound="2"
@@ -37,8 +39,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExerciceOfPublicAuthority" eSuperTypes="#//LegalBasis"/>
   <eClassifiers xsi:type="ecore:EClass" name="Consent" eSuperTypes="#//LegalBasis">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="definedPurpose" lowerBound="1"
-        upperBound="-1" eType="#//Purpose"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="consentee" lowerBound="1"
         eType="#//NaturalPerson"/>
   </eClassifiers>

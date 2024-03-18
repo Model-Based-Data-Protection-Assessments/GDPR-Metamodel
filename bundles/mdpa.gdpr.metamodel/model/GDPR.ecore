@@ -17,7 +17,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Collecting" eSuperTypes="#//Processing"/>
   <eClassifiers xsi:type="ecore:EClass" name="Transferring" eSuperTypes="#//Processing"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Useage" eSuperTypes="#//Processing"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Usage" eSuperTypes="#//Processing"/>
   <eClassifiers xsi:type="ecore:EClass" name="Storing" eSuperTypes="#//Processing"/>
   <eClassifiers xsi:type="ecore:EClass" name="Data" eSuperTypes="#//AbstractGDPRElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="PersonalData" eSuperTypes="#//Data">

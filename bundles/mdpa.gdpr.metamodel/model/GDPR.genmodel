@@ -21,7 +21,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GDPR.ecore#//Processing/responsible"/>
     </genClasses>
     <genClasses ecoreClass="GDPR.ecore#//Collecting" labelFeature="../../tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel#//identifier/NamedElement/entityName"/>
-    <genClasses ecoreClass="GDPR.ecore#//Transfering" labelFeature="../../tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel#//identifier/NamedElement/entityName"/>
+    <genClasses ecoreClass="GDPR.ecore#//Transferring" labelFeature="../../tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel#//identifier/NamedElement/entityName"/>
     <genClasses ecoreClass="GDPR.ecore#//Useage" labelFeature="../../tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel#//identifier/NamedElement/entityName"/>
     <genClasses ecoreClass="GDPR.ecore#//Storing" labelFeature="../../tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel#//identifier/NamedElement/entityName"/>
     <genClasses ecoreClass="GDPR.ecore#//Data" labelFeature="../../tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel#//identifier/NamedElement/entityName"/>
@@ -36,12 +36,11 @@
     <genClasses ecoreClass="GDPR.ecore#//PerformanceOfContract" labelFeature="../../tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel#//identifier/NamedElement/entityName">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GDPR.ecore#//PerformanceOfContract/contractingParty"/>
     </genClasses>
-    <genClasses ecoreClass="GDPR.ecore#//ExerciceOfPublicAuthority" labelFeature="../../tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel#//identifier/NamedElement/entityName"/>
+    <genClasses ecoreClass="GDPR.ecore#//ExerciseOfPublicAuthority" labelFeature="../../tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel#//identifier/NamedElement/entityName"/>
     <genClasses ecoreClass="GDPR.ecore#//Consent" labelFeature="../../tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel#//identifier/NamedElement/entityName">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GDPR.ecore#//Consent/consentee"/>
     </genClasses>
     <genClasses ecoreClass="GDPR.ecore#//NaturalPerson">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GDPR.ecore#//NaturalPerson/birthdate"/>
     </genClasses>
     <genClasses ecoreClass="GDPR.ecore#//Controller"/>
     <genClasses ecoreClass="GDPR.ecore#//Role">

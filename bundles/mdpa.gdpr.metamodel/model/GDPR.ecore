@@ -16,7 +16,7 @@
         eType="#//Role"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Collecting" eSuperTypes="#//Processing"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Transfering" eSuperTypes="#//Processing"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Transferring" eSuperTypes="#//Processing"/>
   <eClassifiers xsi:type="ecore:EClass" name="Useage" eSuperTypes="#//Processing"/>
   <eClassifiers xsi:type="ecore:EClass" name="Storing" eSuperTypes="#//Processing"/>
   <eClassifiers xsi:type="ecore:EClass" name="Data" eSuperTypes="#//AbstractGDPRElement"/>
@@ -34,14 +34,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="contractingParty" lowerBound="2"
         upperBound="-1" eType="#//Role"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExerciceOfPublicAuthority" eSuperTypes="#//LegalBasis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExerciseOfPublicAuthority" eSuperTypes="#//LegalBasis"/>
   <eClassifiers xsi:type="ecore:EClass" name="Consent" eSuperTypes="#//LegalBasis">
     <eStructuralFeatures xsi:type="ecore:EReference" name="consentee" lowerBound="1"
         eType="#//NaturalPerson"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NaturalPerson" eSuperTypes="#//Role">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="birthdate" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Date"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NaturalPerson" eSuperTypes="#//Role"/>
   <eClassifiers xsi:type="ecore:EClass" name="Controller" eSuperTypes="#//Role"/>
   <eClassifiers xsi:type="ecore:EClass" name="Role" abstract="true" eSuperTypes="#//AbstractGDPRElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>

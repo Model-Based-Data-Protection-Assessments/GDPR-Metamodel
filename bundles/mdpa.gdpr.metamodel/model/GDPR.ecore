@@ -41,7 +41,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NaturalPerson" eSuperTypes="#//Role"/>
   <eClassifiers xsi:type="ecore:EClass" name="Controller" eSuperTypes="#//Role"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Role" abstract="true" eSuperTypes="#//AbstractGDPRElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Role" eSuperTypes="#//AbstractGDPRElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ThirdParty" eSuperTypes="#//Role"/>

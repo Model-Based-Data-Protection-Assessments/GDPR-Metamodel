@@ -35,14 +35,14 @@
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference contextproperties.ecore#//Expression/parentAssessmentFact"/>
     </genClasses>
     <genClasses ecoreClass="contextproperties.ecore#//Scope">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contextproperties.ecore#//Scope/expressionDependentScopeElements"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contextproperties.ecore#//Scope/lafScopeElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contextproperties.ecore#//Scope/expressionDependentScopeElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contextproperties.ecore#//Scope/lafScopeElements"/>
     </genClasses>
     <genClasses image="false" ecoreClass="contextproperties.ecore#//ScopeElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contextproperties.ecore#//ScopeElement/negated"/>
     </genClasses>
     <genClasses ecoreClass="contextproperties.ecore#//ExpressionDependentScopeElement">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contextproperties.ecore#//ExpressionDependentScopeElement/safAnnotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contextproperties.ecore#//ExpressionDependentScopeElement/safAnnotation"/>
     </genClasses>
     <genClasses ecoreClass="contextproperties.ecore#//LAFScopeElement">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contextproperties.ecore#//LAFScopeElement/lafElement"/>

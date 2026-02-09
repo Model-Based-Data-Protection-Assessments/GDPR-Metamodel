@@ -34,9 +34,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Scope" eSuperTypes="../../tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="expressionDependentScopeElements"
-        upperBound="-1" eType="#//ExpressionDependentScopeElement"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="lafScopeElements" lowerBound="1"
-        upperBound="-1" eType="#//LAFScopeElement"/>
+        upperBound="-1" eType="#//ExpressionDependentScopeElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lafScopeElements" upperBound="-1"
+        eType="#//LAFScopeElement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ScopeElement" abstract="true" interface="true"
       eSuperTypes="../../tools.mdsd.modelingfoundations.identifier/model/identifier.ecore#//Entity">
